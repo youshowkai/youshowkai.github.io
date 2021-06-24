@@ -67,6 +67,7 @@ header img {
   display: block;
   margin: 20px auto;
   width: 100%;
+  max-width: 500px;
 }
 
 li > p {
@@ -246,7 +247,7 @@ dl > div.appear dd {
 .sns {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 20px;
   display: flex;
   justify-content: center;
 }
@@ -269,7 +270,7 @@ dl > div.appear dd {
 }
 /* footer */
 footer {
-  background: hsl(var(--my-hue), 40%, 65%);
+  background: hsl(var(--my-hue), 30%, 60%);
 }
 
 footer p {
@@ -277,7 +278,7 @@ footer p {
   font-size: 16px;
   padding: 60px 0;
   margin: 0;
-  color: hsl(var(--my-hue), 90%, 30%);
+  color: hsl(var(--my-hue), 90%, 20%);
 }
 
 @keyframes fadein {
@@ -316,11 +317,14 @@ footer p {
   line-height: 64px;
   }
 
+}
+
+@media (min-width: 750px) {
   .content li {
     display: flex;
     align-items: center;
   }
-
+  
   .raightside {
     flex-direction: row-reverse;
   }
@@ -328,6 +332,12 @@ footer p {
 
 /* large scren */
 @media (min-width: 900px) {
+
+  header img {
+    width: 70%;
+    height: 70%;
+    max-width: 850px;
+  }
   .menu {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
